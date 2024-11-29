@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard\PostController;
 use App\Http\Controllers\PrimerControlador;
 use App\Http\Controllers\SegundoControlador;
 use Illuminate\Support\Facades\Route;
@@ -23,5 +24,7 @@ Route::get('contact2', function () {
 
 //Route::resource('post',PrimerControlador::class);
 
-Route::get('test',[PrimerControlador::class,'index']);
-Route::get('otro/{post?}/{otro?}',[PrimerControlador::class,'otro']);
+//Route::get('test',[PrimerControlador::class,'index']);
+//Route::get('otro/{post?}/{otro?}',[PrimerControlador::class,'otro']);
+
+Route::resource('post',PostController::class);
